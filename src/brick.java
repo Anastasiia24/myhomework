@@ -15,9 +15,13 @@ public class brick {
         System.out.println("Enter diameter");
         int d=sc3.nextInt();
         int r=0;
-        if((x<=d && y<=d && z>d) || (x<=d && z<=d && y>d) || (y<=d && z<=d && x>d))
+
+        double a=Math.sqrt(x*x+z*z);
+        double b=Math.sqrt(x*x+y*y);
+        double c=Math.sqrt(y*y+z*z);
+        if((b<d && a>d && c>d ) || (a<d && b>d && c>d) || (c<d && a>d && b>d))
         {System.out.println("the book will enter by one side");}
-        else if(x<d && y<d && z<d) {System.out.println("the book will enter by 3 sides");}
+        else if(a<d && b<d && c<d) {System.out.println("the book will enter by 3 sides");}
         else {System.out.println("no one");}
     }
 }
