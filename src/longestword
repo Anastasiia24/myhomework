@@ -1,0 +1,16 @@
+package first_package;
+
+public class Lesson {
+    public static void main(String[] args) {
+               int result=0;
+                String longestword="";
+                for( int i=1; i<args.length; i++){
+                    if(args[i].length()>result) {
+                        result = args[i].length();
+                    }
+                    longestword=args[i];
+                }
+        System.out.println(longestword);
+    }
+
+}
